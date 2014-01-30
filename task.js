@@ -12,19 +12,11 @@ var wait = function(msec, fn) {
   setTimeout(fn, msec);
 };
 
-var inst2 = function(){
-  $z.showSlide("instructions2");
-};
+var instructionCount = 1;
 
-var inst3 = function(){
-  $z.showSlide("instructions3");
-};
-
-var inst4 = function(){
-  $z.showSlide("instructions4");
-};
-var inst5 = function(){
-  $z.showSlide("instructions5");
+var nextInstruction = function(){
+  instructionCount++;
+  $z.showSlide("instructions" + instructionCount);
 };
 
 function setupRecall(options) {
