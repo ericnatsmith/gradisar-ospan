@@ -56,3 +56,7 @@
 #error textarea {
 font-family: courier
 }
+
+.letter {
+    font-size: 140%;
+}
