@@ -19,6 +19,22 @@ var nextInstruction = function(){
   $z.showSlide("instructions" + instructionCount);
 };
 
+// Force Q and P press
+$(document).keyup(function(e) {
+  if (e.keyCode == 81 & instructionCount == 2) { nextInstruction() }   // Q
+});
+
+$(document).keyup(function(e) {
+  if (e.keyCode == 80 & instructionCount == 3) { //P and hide Jump
+    nextInstruction();
+    wait(3000, function() {
+      $('#hide-me').css("visibility","hidden");
+    });
+   }   
+});
+
+                    
+
 function setupRecall(options) {
   (function() {
     var correctWords = options.words,

@@ -43,7 +43,9 @@
     text-transform: lowercase
 }
 
-
+.center-block {
+    margin: 40px auto;
+}
 
 #wrapper {
     width: 1024px;

@@ -31,8 +31,7 @@
 		<div class="zen-slide" id="instructions1">
 			<div class="zen-slide-center">
 				<p>
-					In this task, you will solve math problems while you also
-					try to memorize words you see on the screen.
+					During this task, you will solve math problems and memorize words.
 				</p>
 				<button class="zen" type="button" onclick="nextInstruction()">NEXT</button>
 			</div>
@@ -45,45 +44,51 @@
 					decide it is correct or incorrect.
 				</p>
 				<p>
-					It is VERY important to solve the
-					problems as <b>quickly</b> and as <b>accurately</b> as possible. 
+					When the equation is <b>incorrect</b> like the one below, press the letter <b>Q</b>.
 				</p>
-				<p class="test-math-prompt">
-					1 + 2 = 4 &nbsp;&nbsp;&nbsp;&nbsp; 2 + 2 = 4
-				</p>
+				<div class="test-math-prompt center-block">
+					1 + 2 = 4 
+				</div>
 				<p>
-					&nbsp;&nbsp; 
-					Press <b>Q</b> if incorrect
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					Press <b>P</b> if correct
+					Please press <b>Q</b> to continue.
 				</p>
-				<button class="zen" type="button"
-				onclick="nextInstruction()">NEXT</button>
 			</div>
 		</div>
 		<div class="zen-slide" id="instructions3">
 			<div class="zen-slide-center">
 				<p>
-					Most students find they are faster if they have a finger of each hand resting on Q and P like the picture below. 
+					When the equation is <b>correct</b> like the one below, press the letter <b>P</b>.
 				</p>
+				<div class="test-math-prompt center-block">
+					2 + 2 = 4 
+				</div>
 				<p>
-					<img src="img/keyboard.png" alt="hands on keyboard">
+					Please press <b>P</b> to continue.
+				</p>
+			</div>
+		</div>
+		<div class="zen-slide" id="instructions4">
+			<div class="zen-slide-center">
+				<p>
+					After you solve the math problem, a word will quickly appear on the screen.
+				</p>
+				<div id="hide-me" class="test-word-text">
+					Jump
+				</div>
+				<p>
+					You just saw the word <b>Jump</b>. You will need to remember these words as you do the math problems.
 				</p>
 				<button class="zen" type="button"
 				onclick="nextInstruction()">NEXT</button>
 			</div>
 		</div>
-
-		<div class="zen-slide" id="instructions4">
+		<div class="zen-slide" id="instructions5">
 			<div class="zen-slide-center">
 				<p>
-					Once you solve the math problem, a word will quickly appear on the screen.
+					These words will appear after each math problem.
 				</p>
-				<div class="test-word-text">
-					Jump
-				</div>
 				<p>
-					You will need to remember every word that flashes to later write them in a box.
+					When you see a box on the screen like the one below, you will have to type in all the words in order.
 				</p>
 				<div>
 					<textarea class="test-recall-text" rows="4" cols="8">jump</textarea>
@@ -92,23 +97,31 @@
 				onclick="nextInstruction()">NEXT</button>
 			</div>
 		</div>
-		<div class="zen-slide" id="instructions5">
+		<div class="zen-slide" id="instructions6">
 			<div class="zen-slide-center">
 				<p>
-					After each math problem, you will see the next word, and then another math problem, and so on. 
+					It is VERY important to solve the
+					problems as <b>quickly</b> and as <b>accurately</b> as possible. 
+				</p>
+				<button class="zen" type="button"
+				onclick="nextInstruction()">NEXT</button>
+			</div>
+		</div>
+		<div class="zen-slide" id="instructions7">
+			<div class="zen-slide-center">
+				<p>
+					Most students find they are faster if they have a finger of each hand resting on Q and P like the picture below. 
 				</p>
 				<p>
-					At the end of the sequence, you will have to type in all words in that order they appeared.
+					<img src="img/keyboard.png" alt="hands on keyboard">
 				</p>
 				<p>
-					Click NEXT to do some practice sets.
+					Click 'NEXT' to start a practice test.
 				</p>
 				<button class="zen" type="button"
 				onclick="stream1.start()">NEXT</button>
 			</div>
 		</div>
-
-
 
 					
 
@@ -142,8 +155,11 @@
 				<p>
 					The first math problem was <b>true</b> and the second
 					was <b>false</b>. It is important that these are correct. You should
-					have typed the words <b>disc</b> and <b>form</b> in the text box, each
-					on its own line. Click NEXT when you are ready to do the next practice
+					have typed the words <b>disc</b> and <b>form</b> in the text box, as shown below.
+				</p>
+				<div><textarea class="test-recall-text" rows="4" cols="8">disc&#013;form</textarea></div>
+				<p>
+					Click NEXT when you are ready to do the next practice
 					set.
 				</p>
 				<button class="zen" type="button"
