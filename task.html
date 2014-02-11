@@ -70,25 +70,32 @@
 		<div class="zen-slide" id="instructions4">
 			<div class="zen-slide-center">
 				<p>
-					After you solve the math problem, a word will quickly appear on the screen.
+					After you solve the math problem, a word will quickly appear on the screen. Click Next to see what this will look like.
 				</p>
+				<button class="zen" type="button"
+				onclick="nextInstruction();delayInstruction()">NEXT</button>
+			</div>
+		</div>
+		<div class="zen-slide" id="instructions5">
+			<div class="zen-slide-center">
 				<div id="hide-me" class="test-word-text">
 					Jump
 				</div>
+			</div>
+		</div>
+		<div class="zen-slide" id="instructions6">
+			<div class="zen-slide-center">
 				<p>
-					You just saw the word <b>Jump</b>. You will need to remember these words as you do the math problems.
+					You just saw the word <b>Jump</b>. You will need to remember these words as you do the math problems. These words will appear after each math problem.
 				</p>
 				<button class="zen" type="button"
 				onclick="nextInstruction()">NEXT</button>
 			</div>
 		</div>
-		<div class="zen-slide" id="instructions5">
+		<div class="zen-slide" id="instructions7">
 			<div class="zen-slide-center">
 				<p>
-					These words will appear after each math problem.
-				</p>
-				<p>
-					When you see a box on the screen like the one below, you will have to type in all the words in order.
+					When you see a box on the screen like the one below, you will have to type in all the words that you saw in order.
 				</p>
 				<div>
 					<textarea class="test-recall-text" rows="4" cols="8">jump</textarea>
@@ -97,7 +104,7 @@
 				onclick="nextInstruction()">NEXT</button>
 			</div>
 		</div>
-		<div class="zen-slide" id="instructions6">
+		<div class="zen-slide" id="instructions8">
 			<div class="zen-slide-center">
 				<p>
 					It is VERY important to solve the
@@ -107,7 +114,7 @@
 				onclick="nextInstruction()">NEXT</button>
 			</div>
 		</div>
-		<div class="zen-slide" id="instructions7">
+		<div class="zen-slide" id="instructions9">
 			<div class="zen-slide-center">
 				<p>
 					Most students find they are faster if they have a finger of each hand resting on Q and P like the picture below. 

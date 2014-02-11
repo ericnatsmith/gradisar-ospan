@@ -53,6 +53,9 @@
     position: relative;
 }
 
+#hide-me{
+    margin-top: 250px;
+}
 
 .bold {
     font-weight: bold;

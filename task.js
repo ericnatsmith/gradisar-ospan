@@ -27,12 +27,12 @@ $(document).keyup(function(e) {
 $(document).keyup(function(e) {
   if (e.keyCode == 80 & instructionCount == 3) { //P and hide Jump
     nextInstruction();
-    wait(3000, function() {
-      $('#hide-me').css("visibility","hidden");
-    });
    }   
 });
 
+var delayInstruction = function(){
+  wait(1200, function(){nextInstruction()}
+)};
                     
 
 function setupRecall(options) {
@@ -238,7 +238,7 @@ var allWords = ["arch","horn","crab","vine","note",
     allMath = [
       {prompt: "24 + 3 = 27", promptCorrect: true, gradeLevel: 31},
       {prompt: "18/3 = 7", promptCorrect: false, gradeLevel: 46},
-      {prompt: "45 + 2 = 48", promptCorrect: false, gradeLevel: 32},
+      {prompt: "45 + 2 = 47", promptCorrect: true, gradeLevel: 32},
       {prompt: "24 - 17 = 7", promptCorrect: true, gradeLevel: 41},
       {prompt: "7 x 6 = 41", promptCorrect: false, gradeLevel: 52},
       {prompt: "18 - 7 = 11", promptCorrect: true, gradeLevel: 33},
