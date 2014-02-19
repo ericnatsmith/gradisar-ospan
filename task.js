@@ -12,6 +12,20 @@ var wait = function(msec, fn) {
   setTimeout(fn, msec);
 };
 
+$('#recall-text').keyup(function(e) {
+  var newLines = $(this).val().split("\n").length;
+  var i = 2;
+  var myNumbers = "1.";
+  while(i-1 < newLines) {
+    myNumbers = myNumbers + "<br/>" + i + ".";
+    i++;
+    if(i>6){
+      document.getElementById('recall-text').rows=String(i);
+    };
+  };
+  document.getElementById('length-text').innerHTML = myNumbers;
+});
+
 var instructionCount = 1;
 
 var nextInstruction = function(){
@@ -45,6 +59,8 @@ function setupRecall(options) {
     
     // show feedback for 2 seconds and then end trial
     function endRecall() {
+      document.getElementById('recall-text').rows="6";
+      document.getElementById('length-text').innerHTML = "1.";
       var recallText = $("#recall-text").val(),
           responseWords = recallText.split("\n").map(function(y) { return y.toLowerCase() }),
           n = correctWords.length,

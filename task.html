@@ -97,8 +97,9 @@
 				<p>
 					When you see a box on the screen like the one below, you will have to type in all the words that you saw in order.
 				</p>
-				<div>
-					<textarea class="test-recall-text" rows="4" cols="8">jump</textarea>
+				<div class="numbered">
+					<p>1.</p>
+					<textarea disabled="disabled" class="test-recall-text" rows="4" cols="8">jump</textarea>
 				</div>
 				<button class="zen" type="button"
 				onclick="nextInstruction()">NEXT</button>
@@ -151,7 +152,10 @@
 		<div id="recall" class="zen-slide">
 			<p>Enter the words in order. Put each word on its own line. If you
 				forgot a word, leave that line blank.</p>
-				<div><textarea id="recall-text" rows="7" cols="8"></textarea></div>
+				<div class="numbered">
+					<p id="length-text">1.</p>
+					<div><textarea id="recall-text" rows="7" cols="8"></textarea></div>
+				</div>
 				<button id="end-recall" class="zen" type="button">NEXT</button>
 			</div>
 
@@ -164,7 +168,10 @@
 					was <b>false</b>. It is important that these are correct. You should
 					have typed the words <b>disc</b> and <b>form</b> in the text box, as shown below.
 				</p>
-				<div><textarea class="test-recall-text" rows="4" cols="8">disc&#013;form</textarea></div>
+				<div class="numbered">
+					<p>1.<br/>2.</p>
+					<div><textarea disabled="disabled" class="test-recall-text" rows="4" cols="8">disc&#013;form</textarea></div>
+				</div>
 				<p>
 					Click NEXT when you are ready to do the next practice
 					set.
