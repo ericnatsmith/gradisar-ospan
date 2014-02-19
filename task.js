@@ -14,16 +14,26 @@ var wait = function(msec, fn) {
 
 $('#recall-text').keyup(function(e) {
   var newLines = $(this).val().split("\n").length;
-  var i = 2;
-  var myNumbers = "1.";
+  var i = 3;
+  var myNumbers = "1.<br/>2.";
   while(i-1 < newLines) {
     myNumbers = myNumbers + "<br/>" + i + ".";
     i++;
-    if(i>6){
-      document.getElementById('recall-text').rows=String(i);
+    if(i>7){
+      document.getElementById('recall-text').rows=String(i-1);
     };
   };
   document.getElementById('length-text').innerHTML = myNumbers;
+});
+
+$('#recall-text').keypress(function(e) {
+    if (e.which === 32) {
+        $('#space-warn').css("display", "block");
+        return false;
+    }
+    setTimeout(function() {
+        $('#space-warn').slideUp('slow');
+    }, 5000);
 });
 
 var instructionCount = 1;
