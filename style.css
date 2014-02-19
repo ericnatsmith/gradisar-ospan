@@ -68,20 +68,3 @@ font-family: courier
 .letter {
     font-size: 140%;
 }
-
-/*
-Make numbers by text area
-*/ 
-
-.numbered{
-    position: relative;
-}
-.numbered p{
-    left: 355px;
-    top: -20px;
-    position: absolute;
-    font-size: 34px;
-    width: 1ex;
-
-
-}

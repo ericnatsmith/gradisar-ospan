@@ -12,20 +12,6 @@ var wait = function(msec, fn) {
   setTimeout(fn, msec);
 };
 
-$('#recall-text').keyup(function(e) {
-  var newLines = $(this).val().split("\n").length;
-  var i = 3;
-  var myNumbers = "1.<br/>2.";
-  while(i-1 < newLines) {
-    myNumbers = myNumbers + "<br/>" + i + ".";
-    i++;
-    if(i>7){
-      document.getElementById('recall-text').rows=String(i-1);
-    };
-  };
-  document.getElementById('length-text').innerHTML = myNumbers;
-});
-
 $('#recall-text').keypress(function(e) {
     if (e.which === 32) {
         $('#space-warn').css("display", "block");
@@ -69,8 +55,6 @@ function setupRecall(options) {
     
     // show feedback for 2 seconds and then end trial
     function endRecall() {
-      document.getElementById('recall-text').rows="6";
-      document.getElementById('length-text').innerHTML = "1.";
       var recallText = $("#recall-text").val(),
           responseWords = recallText.split("\n").map(function(y) { return y.toLowerCase() }),
           n = correctWords.length,
@@ -217,6 +201,7 @@ var getOuterStream = function(params0) {
 		                    correct: correct,
 		                    rt: rt
 		                  });
+                      document.getElementById("recall-text").select();
 		                });
                   }
                 };
