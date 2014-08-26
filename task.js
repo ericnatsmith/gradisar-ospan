@@ -13,13 +13,15 @@ var wait = function(msec, fn) {
 };
 
 $('#recall-text').keypress(function(e) {
-    if (e.which === 32) {
-        $('#space-warn').css("display", "block");
-        return false;
-    }
+  if (e.which == 32 || e.which == 188 || e.which == 44  ) {
+    $('#space-warn').css("display", "block");
+    return false;
+  }
+  if (e.which == 13) {
     setTimeout(function() {
         $('#space-warn').slideUp('slow');
-    }, 5000);
+    }, 1000);
+  }
 });
 
 var instructionCount = 1;
