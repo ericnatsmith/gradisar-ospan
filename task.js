@@ -343,6 +343,7 @@ var allWords = ["arch","horn","crab","vine","note",
           success: function(x) {
             log(x);
             $z.showSlide("success");
+            window.close();
           },
           error: function(xhr, ajaxOptions, thrownError) {
             log(xhr);
