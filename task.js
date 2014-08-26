@@ -276,24 +276,6 @@ var allWords = ["arch","horn","crab","vine","note",
         words: words,
         problems: problems
       };
-    }).concat({ // add 12-word catch trial
-      size: 12,
-      words: ["book","tree","face","coat","song","wind",
-              "rain","shop","hall","door","seat","note"],
-      problems: [
-        {prompt: "11 - 2 = 9", promptCorrect: true},
-        {prompt: "3 x 8 = 25", promptCorrect: false},
-        {prompt: "75 - 22 = 63", promptCorrect: false},
-        {prompt: "14/2 = 7", promptCorrect: true},
-        {prompt: "31 + 19 = 50", promptCorrect: true},
-        {prompt: "3 x 4 = 22", promptCorrect: false},
-        {prompt: "34 + 12 = 46", promptCorrect: true},
-        {prompt: "17 + 48 = 55", promptCorrect: false},
-        {prompt: "56/8 = 8", promptCorrect: true},
-        {prompt: "4 x 2 = 9", promptCorrect: false},
-        {prompt: "24 - 8 = 16", promptCorrect: true},
-        {prompt: "19 + 12 = 41", promptCorrect: false}
-      ] 
     }),
     
     stream3 = getOuterStream({
@@ -307,15 +289,12 @@ var allWords = ["arch","horn","crab","vine","note",
             mathScore = (mathTotals - mathErrors) / mathTotals,
             mathRts = [].concat.apply([], completed.pluck("mathRts")),
             meanMathRt = mathRts.sum() / mathRts.length;
-
-        var catchTrial = this.completed[this.completed.length - 1];
         
         if (window.opener) {
           window.opener.done();
         }
         
         var payload = _.extend({
-          passedCatchTrial: !catchTrial.recallPerfect,
           meanRecallScore: meanRecallScore,
           mathScore: mathScore,
           meanMathRt: meanMathRt,
