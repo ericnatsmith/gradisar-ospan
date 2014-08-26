@@ -228,26 +228,16 @@ var trials1 = [{words: ["disc","form"],
                   {prompt: "10 - 3 = 7", promptCorrect: true},
                   {prompt: "40 + 50 = 80", promptCorrect: false}
                 ]}],
-    trials2 = [{words: ["germ","yard"],
-                problems: [
-                  {prompt: "56 + 2 = 54", promptCorrect: false},
-                  {prompt: "14 / 2 = 7", promptCorrect: true}
-                ]}],
     stream1 = getOuterStream({trials: trials1,
                               after: function() {
                                 $z.showSlide("feedback1");
                               }
-                             }), 
-    stream2 = getOuterStream({trials: trials2,
-                              after: function() {
-                                $z.showSlide("feedback2");
-                              }
-                             });
+                             }); 
 
 var allWords = ["arch","horn","crab","vine","note",
                 "fort","seal","joke","clay","camp",
-                "palm","dart","whip","cube","hive",
-                "cage","pest","tape","hail","tide"],
+                "palm","dart"],
+                // Deleted Words: "whip","cube","hive","cage","pest","tape","hail","tide"
     allMath = [
       {prompt: "24 + 3 = 27", promptCorrect: true, gradeLevel: 31},
       {prompt: "18/3 = 7", promptCorrect: false, gradeLevel: 46},
@@ -260,19 +250,20 @@ var allWords = ["arch","horn","crab","vine","note",
       {prompt: "56 - 21 = 45", promptCorrect: false, gradeLevel: 54},
       {prompt: "68 + 9 = 77", promptCorrect: true, gradeLevel: 35},
       {prompt: "2 x 9 = 21", promptCorrect: false, gradeLevel: 44},
-      {prompt: "7 x 5 = 35", promptCorrect: true, gradeLevel: 37},
-      {prompt: "13 + 15 = 29", promptCorrect: false, gradeLevel: 42},
-      {prompt: "44 + 35 = 89", promptCorrect: false, gradeLevel: 56},
-      {prompt: "12 - 3 = 8", promptCorrect: false, gradeLevel: 34},
-      {prompt: "6 x 6 = 36", promptCorrect: true, gradeLevel: 45},
-      {prompt: "23 + 9 = 31", promptCorrect: false, gradeLevel: 36},
-      {prompt: "26 + 51 = 67", promptCorrect: false, gradeLevel: 58},
-      {prompt: "24/3 = 8", promptCorrect: true, gradeLevel: 47},
-      {prompt: "41 + 23 = 64", promptCorrect: true, gradeLevel: 53}
+      {prompt: "13 + 15 = 29", promptCorrect: false, gradeLevel: 42}
     ],
+    // Deleted Math Trials
+      //{prompt: "7 x 5 = 35", promptCorrect: true, gradeLevel: 37},
+      //{prompt: "44 + 35 = 89", promptCorrect: false, gradeLevel: 56},
+      //{prompt: "12 - 3 = 8", promptCorrect: false, gradeLevel: 34},
+      //{prompt: "6 x 6 = 36", promptCorrect: true, gradeLevel: 45},
+      //{prompt: "23 + 9 = 31", promptCorrect: false, gradeLevel: 36},
+      //{prompt: "26 + 51 = 67", promptCorrect: false, gradeLevel: 58},
+      //{prompt: "24/3 = 8", promptCorrect: true, gradeLevel: 47},
+      //{prompt: "41 + 23 = 64", promptCorrect: true, gradeLevel: 53}
     realWords = allWords.shuffle(),
     realMath = allMath.shuffle(),
-    trials3 = [2,3,4,5,6].shuffle().map(function(size) {
+    trials3 = [2,4,6].shuffle().map(function(size) {
       var words = _(realWords).first(size),
           problems = _(realMath).first(size);
       
